@@ -115,7 +115,7 @@ EOH
 
 To test that everything has been set up correctly, run the following command:
 ```bash
-aws-vault exec ${ACCOUNT}-ro -- aws ec2 describe-regions
+aws-vault exec ${ACCOUNT_NAME}-ro -- aws ec2 describe-regions
 ```
 
 If everything works correctly, you will be prompted for an MFA token. After entering it you should see some output similar to this:
@@ -139,7 +139,7 @@ Enter token for arn:aws:iam::517826968395:mfa/jcrowe: 123456
 
 Finally you should attempt to login to the web console for the account by running this command. It should open a new tab in your browser:
 ```bash
-aws-vault --debug login ${ACCOUNT}-ro
+aws-vault --debug login ${ACCOUNT_NAME}-ro
 ```
 
 ### nubis-builder
